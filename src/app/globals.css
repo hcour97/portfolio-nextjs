@@ -22,4 +22,29 @@ body {
   color: rgb(var(--foreground-rgb));
 }
 
+.project-card {
+  width: 200px;
+  margin: 10px;
+  display: inline-block;
+}
+
+.project-card {
+  max-width: 400px;
+}
+
+.project-content {
+  background-color: #a2c11c;
+  border: 4px solid #d0e964;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  height: 100%;
+}
+
+.project-content img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
 
