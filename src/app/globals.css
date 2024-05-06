@@ -29,7 +29,14 @@ body {
 }
 
 .project-card {
+  display: inline-block;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 200px;
   max-width: 400px;
+  height: 100%;
+  margin: 10px;
+  vertical-align: middle;
 }
 
 .project-content {
