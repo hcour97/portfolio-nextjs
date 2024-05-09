@@ -56,7 +56,6 @@ export default function Home() {
             <h4 className="text-centerfont-jersey text-xs max-w-md overflow-hidden whitespace-no-wrap pt-4">
               I'm a fullstack software engineer, with a bachelor's degree and experience designing, 
               implementing and testing full-stack web applications.
-              Currently open to a role where I can continue my coding journey.
               In my freetime, I love to walk my dog, read, golf and bird-watch.
             </h4>
             <br></br>
