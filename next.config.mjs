@@ -4,7 +4,8 @@ const nextConfig = {
     output: 'export',
     distDir: 'dist',
     trailingSlash: true,
-    assetPrefix: '.',
+    // assetPrefix: '.',
+    assetPrefix: '/'
 };
 
 export default nextConfig;
