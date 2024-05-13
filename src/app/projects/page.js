@@ -12,6 +12,7 @@ import ProjectCard from '@/components/ProjectCard';
 export default function ProjectRoladex() {
 
 const [currentIndex, setCurrentIndex] = useState(0);
+
 console.log("currentIndex=", currentIndex)
 
 const prevProject = () => {
@@ -37,12 +38,55 @@ const nextProject = () => {
                 <a href={`mailto:${'hcour97@gmail.com'}`} ><FontAwesomeIcon icon={ faEnvelope }size ="2x"/></a>
             </div>
         
-        
-            
-        {/* <p className="text-xs">Javascript | HTML | CSS | Python | Node.js | React.js | Next.js | Express | PostgreSQL | SQL </p> */}
-        <br></br>
+        <br />
 
-            {/* <div className="flex justify-center items-center text-white">
+
+
+        <div className="flex justify-center items-center text-white">
+            <button className="text-5xl px-5" onClick={prevProject}><FontAwesomeIcon icon={ faArrowLeft } className="text-navy"/></button>
+                <div className="flex justify-between">
+
+    {/* Display the previous project */}
+                    <div className="peeking">
+                        <ProjectCard id={projectsList[(currentIndex - 1 + projectsList.length) % projectsList.length].id}
+                                    title={projectsList[(currentIndex - 1 + projectsList.length) % projectsList.length].title} 
+                                    languages={projectsList[(currentIndex - 1 + projectsList.length) % projectsList.length].languages}
+                                    imgURL={projectsList[(currentIndex - 1 + projectsList.length) % projectsList.length].imgURL}
+                                    description={projectsList[(currentIndex - 1 + projectsList.length) % projectsList.length].description}
+                                    githubURL={projectsList[(currentIndex - 1 + projectsList.length) % projectsList.length].githubURL}
+                        />
+                    </div>
+
+
+    {/* Display the current project */}
+                    <div className="project-info-current">
+                        <ProjectCard id={projectsList[currentIndex].id}
+                                                    title={projectsList[currentIndex].title}
+                                                    languages={projectsList[currentIndex].languages}
+                                                    imgURL={projectsList[currentIndex].imgURL}
+                                                    description={projectsList[currentIndex].description}
+                                                    githubURL={projectsList[currentIndex].githubURL}
+                        />
+                    </div> 
+
+    {/* Display the next project - 'peeking' */}
+                    <div className="peeking">
+                        <ProjectCard
+                            id={projectsList[(currentIndex + 1) % projectsList.length].id}
+                            title={projectsList[(currentIndex + 1) % projectsList.length].title} 
+                            languages={projectsList[(currentIndex + 1) % projectsList.length].languages}
+                            imgURL={projectsList[(currentIndex + 1) % projectsList.length].imgURL}
+                            description={projectsList[(currentIndex + 1) % projectsList.length].description}
+                            githubURL={projectsList[(currentIndex + 1) % projectsList.length].githubURL}
+                        />
+                    </div>
+                </div>
+            <button className="text-5xl px-5" onClick={nextProject} ><FontAwesomeIcon icon={ faArrowRight } className="text-navy"/></button>
+</div>
+
+
+
+        {/* <div className="flex justify-center items-center text-white">
                 <button className="text-5xl px-5" onClick={prevProject}><FontAwesomeIcon icon={ faArrowLeft } className="text-navy"/></button>
                 <div className="flower-border flex flex-col items-center bg-green-500 border rounded-lg p-10 px-20">
                         <h1 className="font-bold text-2xl">{projectsList[currentIndex].title}</h1>
@@ -52,10 +96,13 @@ const nextProject = () => {
                         <Link href={projectsList[currentIndex].githubURL} target="_blank" rel="noopener noreferrer">View on Github <FontAwesomeIcon icon={faExternalLinkAlt} /></Link>
                 </div> 
                 <button className="text-5xl px-5" onClick={nextProject} ><FontAwesomeIcon icon={ faArrowRight } className="text-navy"/></button>
-            </div> */}
+        </div> */}
 
 
-            <div className="mapoutalltheprojects">
+
+        {/* <div className="carousel">
+        <button className="text-5xl px-5" onClick={prevProject}><FontAwesomeIcon icon={ faArrowLeft } className="text-navy"/></button>
+            <div className="projects">
                 {projectsList.map((project) => {
                     return (
                     <ProjectCard id={project.id}
@@ -68,7 +115,11 @@ const nextProject = () => {
                     )
                 })}
             </div>
+            <button className="text-5xl px-5" onClick={nextProject} ><FontAwesomeIcon icon={ faArrowRight } className="text-navy"/></button>
+        </div> */}
+
         </main>
+        
         
     )
 }
